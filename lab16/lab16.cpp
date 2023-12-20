@@ -98,15 +98,10 @@ int main() {
         break;
         case 4: {
             int m, n, i, j, p = 1;
+            int matrix[100][100];
 
-            printf_s("Введіть розмірність масиву А[m][n]: ");
+            printf_s("Введіть розмірність масиву matrix[m][n](m і n <= 100): ");
             scanf_s("%d%d", &m, &n);
-
-            int** matrix = (int**)malloc(m * sizeof(int*));
-            for (int i = 0; i < m; i++) {
-                    matrix[i] = (int*)malloc(n * sizeof(int));
-            }
-            
             for (i = 0; i < m; i++) {
                 if (i % 2 == 0) {
                     for (j = 0; j < n; j++) {
